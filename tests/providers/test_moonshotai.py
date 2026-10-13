@@ -20,7 +20,7 @@ def test_moonshotai_provider():
     """Test basic MoonshotAI provider initialization."""
     provider = MoonshotAIProvider(api_key='api-key')
     assert provider.name == 'moonshotai'
-    assert provider.base_url == 'https://api.moonshot.ai/v1'
+    assert provider.base_url == 'https://api.moonshot.cn/v1'
     assert isinstance(provider.client, openai.AsyncOpenAI)
     assert provider.client.api_key == 'api-key'
 

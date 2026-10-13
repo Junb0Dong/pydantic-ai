@@ -53,8 +53,9 @@ class MoonshotAIProvider(_OpenAICompatibleProvider):
 
     @property
     def base_url(self) -> str:
-        # OpenAI-compatible endpoint, see MoonshotAI docs
-        return 'https://api.moonshot.ai/v1'
+        # China OpenAI-compatible endpoint. Official default in upstream is
+        # `https://api.moonshot.ai/v1`; this fork uses the domestic API.
+        return 'https://api.moonshot.cn/v1'
 
     @property
     def client(self) -> AsyncOpenAI:

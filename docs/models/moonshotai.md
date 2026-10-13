@@ -16,7 +16,9 @@ pip/uv-add "pydantic-ai-slim[openai]"
 
 ## Configuration
 
-Create an API key in the [Moonshot Console](https://platform.moonshot.ai/console).
+Create an API key in the [Moonshot Console](https://platform.moonshot.cn/console). This fork's
+[`MoonshotAIProvider`][pydantic_ai.providers.moonshotai.MoonshotAIProvider] talks to
+`https://api.moonshot.cn/v1` (China) rather than `https://api.moonshot.ai/v1`.
 
 You can set the `MOONSHOTAI_API_KEY` environment variable and use [`MoonshotAIProvider`][pydantic_ai.providers.moonshotai.MoonshotAIProvider] by name:
 
