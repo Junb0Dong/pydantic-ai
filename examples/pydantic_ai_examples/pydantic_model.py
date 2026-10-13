@@ -13,6 +13,9 @@ from pydantic import BaseModel
 from pydantic_ai import Agent
 from pydantic_ai.capabilities import Caching
 
+from dotenv import load_dotenv
+load_dotenv()
+
 # 'if-token-present' means nothing will be sent (and the example will work) if you don't have logfire configured
 logfire.configure(send_to_logfire='if-token-present')
 logfire.instrument_pydantic_ai()
